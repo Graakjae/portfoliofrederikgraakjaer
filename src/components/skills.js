@@ -10,7 +10,6 @@ const StyledFrontSection = styled.section`
     align-items: center;
     justify-content: center;
     display: flex;
-    padding-top: 0px;
 
     h2 {
         margin-top: 0px;

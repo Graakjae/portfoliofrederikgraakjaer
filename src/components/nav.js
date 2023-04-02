@@ -13,9 +13,6 @@ const Nav = () => {
             name: "Projects"
         },
         {
-            name: "About"
-        },
-        {
             name: "Contact"
         }
     ];

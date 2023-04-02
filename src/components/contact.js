@@ -26,16 +26,13 @@ const StyledHeroSection = styled.section`
 
     p {
         max-width: 540px;
+        margin-bottom: 20px;
         @media (max-width: 600px) {
             max-width: 300px;
         }
     }
     .mail {
-        text-decoration: underline 1px solid green;
-        padding-top: 50px;
         &:hover {
-            transform: translateY(-3px);
-            transition-duration: 0.3s;
             color: #06d640;
         }
     }

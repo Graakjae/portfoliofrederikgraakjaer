@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import frederik from "../images/frederik-graakjaer.png";
-import { Icon } from "@/images/icons";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const StyledFrontSection = styled.section`
     flex-direction: column;
@@ -14,7 +15,7 @@ const StyledFrontSection = styled.section`
     padding: 0;
 
     @media (max-width: 600px) {
-        margin-top: 100px;
+        margin-top: 30px;
     }
     h1 {
         font-size: 80px;
@@ -54,10 +55,11 @@ const Wrapper = styled.div`
 const StyledPic = styled.div`
     position: relative;
     max-width: 300px;
+    margin-left: 30px;
+
 
     @media (max-width: 768px) {
-        margin: 50px auto 0;
-        width: 70%;
+        margin: 20px auto 0;
     }
 
     .wrapper {
@@ -66,7 +68,6 @@ const StyledPic = styled.div`
         align-items: center;
         width: 100%;
         border-radius: 5px;
-        /* z-index: 6; */
         &:hover,
         &:focus {
             outline: 0;
@@ -89,15 +90,40 @@ const StyledPic = styled.div`
             border-radius: 5px;
             z-index: 5;
         }
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        &:after {
+            border: 2px solid #06d640;
+            top: 20px;
+            left: 20px;
+            z-index: -1;
+            @media (max-width: 600px) {
+                border: none;
+            }
+        }
     }
 `;
 
 const FrontPage = () => {
-    const name = <h1>Frederik Graakjær</h1>;
-    const title = <h2>Frontend developer</h2>;
+    useEffect(() => {
+        Aos.init({});
+    }, []);
+
+
+    const name = <h1 >Frederik Graakjær</h1>;
+    const title = <h2 data-aos-delay="100">Frontend developer</h2>;
     const description = (
         <>
-            <p>
+            <p data-aos-delay="150">
                 I am a multimediadesigner with specialization in frontend development. I build stuff for the web. I’m
                 passionate about building beautiful, user-friendly interfaces that help businesses and organizations
                 connect with their audiences.
@@ -107,18 +133,28 @@ const FrontPage = () => {
 
     const items = [name, title, description];
 
+    
     return (
         <div>
             <StyledFrontSection id="top">
-                <Wrapper>
+                <Wrapper data-aos="fade-up"
+                    data-aos-once="false"
+                    data-aos-easing="ease-in-out"
+                    data-aos-duration="400"
+                    >
                     <div>
                         {items.map(item => (
-                            <div key="item">{item}</div>
+                            <div data-aos="fade-up"
+                            data-aos-once="false"
+                            data-aos-easing="ease-in-out"
+                            data-aos-offset="300"
+                            data-aos-duration="400"
+                            data-aos-delay="50" key="item">{item}</div>
                         ))}
                     </div>
                     <StyledPic>
                         <div className="wrapper">
-                            <Image className="img" src={frederik} alt="Frederik Graakjær" />
+                            <Image className="img" data-aos-delay="200" src={frederik} alt="Frederik Graakjær" />
                         </div>
                     </StyledPic>
                 </Wrapper>

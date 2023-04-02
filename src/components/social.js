@@ -35,6 +35,10 @@ const StyledSocialList = styled.ul`
     li {
         &:last-of-type {
             margin-bottom: 25px;
+            @media (max-width: 600px) {
+                margin-bottom: 0px;
+
+                }
         }
         a {
             padding: 0px;
@@ -48,14 +52,13 @@ const StyledSocialList = styled.ul`
 
                 &:hover,
                 &:focus {
-                    transform: translateY(-3px);
-                    transition-duration: 0.3s;
                     color: #06d640;
                 }
                 @media (max-width: 600px) {
                     margin: 0 20px;
                     width: 35px;
                     height: 35px;
+                    margin-top: 0px;
                 }
             }
         }

@@ -38,8 +38,7 @@ const Wrapper = styled.div`
 
 const StyledIcons = styled.ul`
     list-style: none;
-    padding: 0 10px 0 10px;
-
+    padding: 10px 0;
     li {
         a {
             padding: 0px;
@@ -48,7 +47,7 @@ const StyledIcons = styled.ul`
                 width: 22px;
                 height: 22px;
                 color: #a8b2d1;
-                margin-left: 10px;
+                margin-right: 15px;
 
                 &:hover,
                 &:focus {
@@ -68,7 +67,7 @@ const StyledPic = styled.div`
         position: relative;
         border-radius: 5px;
         z-index: 5;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .wrapper {
@@ -107,7 +106,7 @@ const ProjectsMobile = () => {
                 >
                     Projects
                 </h2>
-                {projects.map(({ name, number, urls, img, description, imgRigt, imgLeft }, i) => (
+                {projects.map(({ name, number, urls, img, description }, i) => (
                     <Wrapper
                         key="icon"
                         data-aos="fade-up"
@@ -120,21 +119,21 @@ const ProjectsMobile = () => {
                         <div>
                             <ProjectHeader>
                                 <h3>{name}</h3>
-                                <StyledIcons>
-                                    <li key={i}>
-                                        <a href={urls.github} target="_blank">
-                                            <Icon name="GitHub" />
-                                        </a>
-                                        <a href={urls.website} target="_blank">
-                                            <Icon name="External" />
-                                        </a>
-                                        <a href={urls.Xd} target="_blank">
-                                            <Icon name="Xd" />
-                                        </a>
-                                    </li>
-                                </StyledIcons>
                             </ProjectHeader>
                             <p>{description}</p>
+                            <StyledIcons>
+                                <li key={i}>
+                                    <a href={urls.github} target="_blank">
+                                        <Icon name="GitHub" />
+                                    </a>
+                                    <a href={urls.website} target="_blank">
+                                        <Icon name="External" />
+                                    </a>
+                                    <a href={urls.Xd} target="_blank">
+                                        <Icon name="Xd" />
+                                    </a>
+                                </li>
+                            </StyledIcons>
                         </div>
 
                         <StyledPic>
