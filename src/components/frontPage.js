@@ -126,7 +126,7 @@ const FrontPage = () => {
             <p data-aos-delay="150">
                 I am a multimediadesigner with specialization in frontend development. I’m
                 passionate about building beautiful, user-friendly interfaces that help businesses and organizations
-                connect with their audiences.
+                connect with their users.
             </p>
         </>
     );
