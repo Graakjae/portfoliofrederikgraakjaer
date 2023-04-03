@@ -10,7 +10,10 @@ const StyledFrontSection = styled.section`
     align-items: center;
     justify-content: center;
     display: flex;
-
+    padding: 0;
+    @media (max-width: 600px) {
+            padding-top: 75px;
+        }
     h2 {
         margin-top: 0px;
         color: #ccd6f6;

@@ -51,6 +51,7 @@ const StyledHeader = styled.header`
     align-items: center;
     display: flex;
     @media (max-width: 600px) {
+        position: relative;
         width: 100%;
         max-width: 600px;
     }
@@ -72,12 +73,13 @@ const StyledNav = styled.nav`
     width: 100%;
     color: #a8b2d1;
     z-index: 12;
-`;
-
-const StyledLinks = styled.div`
     @media (max-width: 600px) {
         display: none;
     }
+`;
+
+const StyledLinks = styled.div`
+    
 
     ol {
         padding: 0;
