@@ -92,7 +92,7 @@ const Skills = () => {
                     <h2
                         className="section-heading"
                         data-aos="fade-up"
-                        data-aos-once="false"
+                        data-aos-once="true"
                         data-aos-easing="ease-in-out"
                         data-aos-offset="100"
                         data-aos-duration="400"
@@ -102,7 +102,7 @@ const Skills = () => {
                     </h2>
                     <p
                         data-aos="fade-up"
-                        data-aos-once="false"
+                        data-aos-once="true"
                         data-aos-easing="ease-in-out"
                         data-aos-offset="150"
                         data-aos-duration="400"
@@ -120,7 +120,7 @@ const Skills = () => {
                             <div
                                 key="icon"
                                 data-aos="fade-up"
-                                data-aos-once="false"
+                                data-aos-once="true"
                                 data-aos-easing="ease-in-out"
                                 data-aos-offset="150"
                                 data-aos-duration="400"

@@ -119,11 +119,23 @@ const FrontPage = () => {
     }, []);
 
 
-    const name = <h1 >Frederik Graakjær</h1>;
-    const title = <h2 data-aos-delay="100">Frontend developer</h2>;
+    const name = <h1 data-aos="fade-up"
+    data-aos-once="true"
+    data-aos-easing="ease-in-out"
+    data-aos-duration="400"
+    data-aos-delay="100" >Frederik Graakjær</h1>;
+    const title = <h2 data-aos-delay="300" data-aos="fade-up"
+    data-aos-once="true"
+    data-aos-easing="ease-in-out"
+    data-aos-duration="400"
+    >Frontend developer</h2>;
     const description = (
         <>
-            <p data-aos-delay="150">
+            <p  data-aos="fade-up"
+                            data-aos-once="true"
+                            data-aos-easing="ease-in-out"
+                            data-aos-duration="400"
+                            data-aos-delay="500">
                 I am a multimediadesigner with specialization in frontend development. I’m
                 passionate about building beautiful, user-friendly interfaces that help businesses and organizations
                 connect with their users.
@@ -137,24 +149,20 @@ const FrontPage = () => {
     return (
         <div>
             <StyledFrontSection id="top">
-                <Wrapper data-aos="fade-up"
-                    data-aos-once="false"
-                    data-aos-easing="ease-in-out"
-                    data-aos-duration="400"
+                <Wrapper 
                     >
                     <div>
                         {items.map(item => (
-                            <div data-aos="fade-up"
-                            data-aos-once="false"
-                            data-aos-easing="ease-in-out"
-                            data-aos-offset="300"
-                            data-aos-duration="400"
-                            data-aos-delay="50" key="item">{item}</div>
+                            <div  key="item">{item}</div>
                         ))}
                     </div>
                     <StyledPic>
                         <div className="wrapper">
-                            <Image className="img" data-aos-delay="200" src={frederik} alt="Frederik Graakjær" />
+                            <Image data-aos="fade-up"
+                            data-aos-once="false"
+                            data-aos-easing="ease-in-out"
+                            data-aos-duration="400"
+                            data-aos-delay="50" className="img" data-aos-delay="200" src={frederik} alt="Frederik Graakjær" />
                         </div>
                     </StyledPic>
                 </Wrapper>

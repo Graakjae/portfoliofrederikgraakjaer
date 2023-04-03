@@ -177,7 +177,7 @@ const Projects = () => {
                 <h2
                     className="section-heading"
                     data-aos="fade-up"
-                    data-aos-once="false"
+                    data-aos-once="true"
                     data-aos-easing="ease-in-out"
                     data-aos-offset="300"
                     data-aos-duration="400"
@@ -189,7 +189,7 @@ const Projects = () => {
                     <Wrapper
                         key="icon"
                         data-aos="fade-up"
-                        data-aos-once="false"
+                        data-aos-once="true"
                         data-aos-easing="ease-in-out"
                         data-aos-offset="250"
                         data-aos-duration="400"
