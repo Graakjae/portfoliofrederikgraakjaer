@@ -160,13 +160,13 @@ const FrontPage = () => {
                             <div  key="item">{item}</div>
                         ))}
                     </div>
-                    <StyledPic>
-                        <div className="wrapper">
-                            <Image data-aos="fade-up"
+                    <StyledPic data-aos="fade-up"
                             data-aos-once="false"
                             data-aos-easing="ease-in-out"
                             data-aos-duration="400"
-                            data-aos-delay="50" className="img" data-aos-delay="200" src={frederik} alt="Frederik Graakjær" />
+                            data-aos-delay="500">
+                        <div className="wrapper">
+                            <Image data-aos-delay="600" className="img" src={frederik} alt="Frederik Graakjær" />
                         </div>
                     </StyledPic>
                 </Wrapper>

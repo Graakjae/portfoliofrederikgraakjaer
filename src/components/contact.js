@@ -19,10 +19,9 @@ const StyledHeroSection = styled.section`
         margin-top: 0px;
         color: #ccd6f6;
         font-size: 40px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         @media (max-width: 600px) {
             font-size: 30px;
-            margin-bottom: 20px;
         }
     }
 
@@ -53,13 +52,13 @@ const Contact = () => {
                         data-aos-easing="ease-in-out"
                         data-aos-offset="100"
                         data-aos-duration="400"
-                        data-aos-delay="50">Contact</h2>
+                        data-aos-delay="100">Contact</h2>
                 <p data-aos="fade-up"
                         data-aos-once="true"
                         data-aos-easing="ease-in-out"
                         data-aos-offset="100"
                         data-aos-duration="400"
-                        data-aos-delay="50">
+                        data-aos-delay="200">
                     Thanks for checking out my portfolio! If you’d like to get in touch with me about a project, a job
                     position or just to say hello, please feel free to reach out to me. I’m always interested in hearing
                     about new opportunities, so don’t hesitate to reach out. Looking forward to connecting with you!
@@ -67,10 +66,9 @@ const Contact = () => {
 
                 <a data-aos="fade-up"
                         data-aos-once="true"
-                        data-aos-easing="ease-in-out"
                         data-aos-offset="100"
                         data-aos-duration="400"
-                        data-aos-delay="50" href="mailto: graakjaer.f@gmail.com" className="mail">
+                        data-aos-delay="300" href="mailto: graakjaer.f@gmail.com" className="mail">
                     graakjaer.f@gmail.com
                 </a>
             </div>
