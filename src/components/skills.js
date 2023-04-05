@@ -33,7 +33,6 @@ const StyledFrontSection = styled.section`
 const Wrapper = styled.div`
     justify-content: center;
     max-width: 1000px;
-    /* align-items: center; */
     display: flex;
     @media (max-width: 768px) {
         display: block;
@@ -63,6 +62,11 @@ const StyledIcons = styled.div`
         column-gap: 20px;
         row-gap: 30px;
         width: 100%;
+        @media (max-width: 768px) {
+             column-gap: 10px;
+             row-gap: 20px;
+             font-size: 15px;
+         }
         .imgCenter {
             justify-content: center;
             align-items: center;
@@ -77,6 +81,7 @@ const StyledIcons = styled.div`
                 width: 30px;
                 height: 30px;
             }
+            
         }
         
     }

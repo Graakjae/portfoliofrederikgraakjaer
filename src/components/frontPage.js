@@ -37,10 +37,7 @@ const StyledFrontSection = styled.section`
         margin: 20px 0 0;
         max-width: 1000px;
     }
-    h1, h2, p {
-    @media (max-width: 768px) {
-        text-align: center;
-    }}
+    
 `;
 
 const Wrapper = styled.div`
