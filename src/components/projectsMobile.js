@@ -34,6 +34,9 @@ const Wrapper = styled.div`
     justify-content: space-between;
     display: block;
     margin-bottom: 50px;
+    @media (min-width: 768px) {
+        max-width: 700px;
+        }
 `;
 
 const StyledIcons = styled.ul`

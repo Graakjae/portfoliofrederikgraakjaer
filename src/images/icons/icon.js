@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { IconGitHub, IconInstagram, IconLinkedin, IconLoader, IconLogo, IconStar, IconXd } from "../icons";
+import { IconGitHub, IconInstagram, IconLinkedin, IconLoader, IconLogo, IconMail, IconStar, IconXd } from "../icons";
 import IconExternal from "./external";
 import IconArrow from "./arrow";
 
@@ -24,6 +24,8 @@ const Icon = ({ name }) => {
             return <IconXd />;
         case "Arrow":
             return <IconArrow />;
+            case "Mail":
+            return <IconMail />;
     }
 };
 

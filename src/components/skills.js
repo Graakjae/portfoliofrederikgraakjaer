@@ -11,7 +11,7 @@ const StyledFrontSection = styled.section`
     justify-content: center;
     display: flex;
     padding: 0;
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
             padding-top: 75px;
         }
     h2 {
@@ -19,7 +19,7 @@ const StyledFrontSection = styled.section`
         color: #ccd6f6;
         font-size: 40px;
         margin-bottom: 50px;
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             margin-bottom: 20px;
         }
     }
@@ -35,8 +35,12 @@ const Wrapper = styled.div`
     max-width: 1000px;
     /* align-items: center; */
     display: flex;
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         display: block;
+    }
+    @media (max-width: 1100px) {
+        display: block;
+        max-width: 700px;
     }
 `;
 
@@ -47,7 +51,7 @@ const StyledIcons = styled.div`
     display: flex;
     text-align: center;
     width: 100%;
-    @media (max-width: 768px) {
+    @media (max-width: 1100px) {
         margin: 50px auto 0;
     }
 
@@ -69,17 +73,12 @@ const StyledIcons = styled.div`
             z-index: 5;
             width: 64px;
             height: 64px;
-            @media (max-width: 600px) {
+            @media (max-width: 768px) {
                 width: 30px;
                 height: 30px;
             }
         }
-        @media (max-width: 600px) {
-            grid-template-columns: repeat(4, 1fr);
-            column-gap: 10px;
-            row-gap: 20px;
-            font-size: 15px;
-        }
+        
     }
 `;
 

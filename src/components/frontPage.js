@@ -14,14 +14,14 @@ const StyledFrontSection = styled.section`
     height: 100vh;
     padding: 0;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         margin-top: 30px;
     }
     h1 {
         font-size: 80px;
         color: #ccd6f6;
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             font-size: 35px;
             margin: 0 0 20px 2px;
         }
@@ -38,7 +38,7 @@ const StyledFrontSection = styled.section`
         max-width: 1000px;
     }
     h1, h2, p {
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         text-align: center;
     }}
 `;
@@ -49,10 +49,14 @@ const Wrapper = styled.div`
     align-items: center;
     display: flex;
 
-    @media (max-width: 600px) {
+    @media (max-width: 1100px) {
         display: block;
         width: 100%;
-        max-width: 500px;
+        max-width: 700px;
+    }
+    @media (max-width: 768px) {
+        display: block;
+        width: 100%;
     }
 `;
 
@@ -62,7 +66,7 @@ const StyledPic = styled.div`
     margin-left: 30px;
 
 
-    @media (max-width: 768px) {
+    @media (max-width: 1100px) {
         margin: 20px auto 0;
     }
 
@@ -110,7 +114,7 @@ const StyledPic = styled.div`
             top: 20px;
             left: 20px;
             z-index: -1;
-            @media (max-width: 600px) {
+            @media (max-width: 768px) {
                 border: none;
             }
         }
@@ -122,12 +126,17 @@ const FrontPage = () => {
         Aos.init({});
     }, []);
 
-
+    const hi = <p  data-aos="fade-up"
+    data-aos-once="true"
+    data-aos-easing="ease-in-out"
+    data-aos-duration="400"
+    data-aos-delay="500"> Hi, I'm
+</p>
     const name = <h1 data-aos="fade-up"
     data-aos-once="true"
     data-aos-easing="ease-in-out"
     data-aos-duration="400"
-    data-aos-delay="100" >Frederik Graakjær</h1>;
+    data-aos-delay="100" >Frederik Graakjær</h1>
     const title = <h2 data-aos-delay="300" data-aos="fade-up"
     data-aos-once="true"
     data-aos-easing="ease-in-out"
@@ -140,14 +149,12 @@ const FrontPage = () => {
                             data-aos-easing="ease-in-out"
                             data-aos-duration="400"
                             data-aos-delay="500">
-                I am a multimediadesigner with specialization in frontend development. I’m
-                passionate about building beautiful, user-friendly interfaces that help businesses and organizations
-                connect with their users.
+                I'm a frontend developer based in Aarhus, Denmark. I specialize in building responsive and user-friendly websites. Take a look at my portfolio to see some examples of my work, and feel free to get in touch to discuss your next project.
             </p>
         </>
     );
 
-    const items = [name, title, description];
+    const items = [hi, name, title, description];
 
     
     return (

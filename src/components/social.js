@@ -52,6 +52,8 @@ const StyledSocialList = styled.ul`
 
                 &:hover,
                 &:focus {
+                    transition: all 0.30s cubic-bezier(0.645, 0.045, 0.355, 1);
+                    transform: translateY(-3px);
                     color: #06d640;
                 }
                 @media (max-width: 600px) {

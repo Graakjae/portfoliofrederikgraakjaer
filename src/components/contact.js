@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import Aos from "aos";
+import { Icon } from "../images/icons";
 import "aos/dist/aos.css";
 
 const StyledHeroSection = styled.section`
@@ -10,7 +11,13 @@ const StyledHeroSection = styled.section`
     align-items: center;
     text-align: center;
     padding-bottom: 250px;
-    @media (max-width: 700px) {
+
+    .flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @media (max-width: 768px) {
         height: auto;
         padding-bottom: 50px;
     }
@@ -20,7 +27,7 @@ const StyledHeroSection = styled.section`
         color: #ccd6f6;
         font-size: 40px;
         margin-bottom: 20px;
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             font-size: 30px;
         }
     }
@@ -28,18 +35,61 @@ const StyledHeroSection = styled.section`
     p {
         max-width: 540px;
         margin-bottom: 20px;
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             max-width: 300px;
         }
     }
     .mail {
+        padding: 10px;
         &:hover {
             color: #06d640;
         }
     }
 `;
 
+const StyledIcon = styled.div`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding: 10px;
+
+    li {
+        a {
+            padding: 0px;
+            svg {
+                width: 22px;
+                height: 22px;
+                color: #a8b2d1;
+                margin-left: 10px;
+
+                &:hover,
+                &:focus {
+                    color: #06d640;
+                }
+            }
+        }
+    }
+`;
+
+const ContactWrapper = styled.a`
+    background-color: #181a1f;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.25);
+    max-width: 350px;
+    cursor: pointer;
+            &:hover
+                {
+                    a, svg{
+                        color: #06d640;
+                    }
+                    
+                }
+`;
+
 const Contact = () => {
+    
     useEffect(() => {
         Aos.init({});
     }, []);
@@ -61,16 +111,26 @@ const Contact = () => {
                         data-aos-delay="200">
                     Thanks for checking out my portfolio! If you’d like to get in touch with me about a project, a job
                     position or just to say hello, please feel free to reach out to me. I’m always interested in hearing
-                    about new opportunities, so don’t hesitate to reach out. Looking forward to connecting with you!
+                    about new opportunities, so don’t hesitate to reach out!
                 </p>
-
-                <a data-aos="fade-up"
-                        data-aos-once="true"
-                        data-aos-offset="100"
-                        data-aos-duration="400"
-                        data-aos-delay="300" href="mailto: graakjaer.f@gmail.com" className="mail">
-                    graakjaer.f@gmail.com
-                </a>
+                <div className="flex">
+                    <ContactWrapper href="mailto: graakjaer.f@gmail.com"> 
+                        <StyledIcon>
+                            <li>
+                                <a href="mailto: graakjaer.f@gmail.com">
+                                    <Icon name={"Mail"} />
+                                </a>
+                            </li>
+                        </StyledIcon>
+                        <a data-aos="fade-up"
+                                data-aos-once="true"
+                                data-aos-offset="100"
+                                data-aos-duration="400"
+                                data-aos-delay="300" href="mailto: graakjaer.f@gmail.com" className="mail">
+                            graakjaer.f@gmail.com
+                        </a>
+                    </ContactWrapper>
+                </div>
             </div>
         </StyledHeroSection>
     );

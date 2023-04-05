@@ -35,6 +35,7 @@ const Wrapper = styled.div`
     max-width: 1000px;
     display: flex;
     margin-bottom: 100px;
+    
 `;
 
 const StyledIcons = styled.ul`

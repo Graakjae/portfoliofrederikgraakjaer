@@ -15,7 +15,7 @@ import useMediaQuery from "../hooks/media";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-    const isDesktop = useMediaQuery("(min-width: 960px)");
+    const isDesktop = useMediaQuery("(min-width: 1100px)");
 
     return (
         <>

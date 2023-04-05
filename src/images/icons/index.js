@@ -7,3 +7,4 @@ export { default as IconLogo } from "./logo";
 export { default as IconExternal } from "./external";
 export { default as IconXd } from "./xd";
 export { default as IconArrow } from "./arrow";
+export { default as IconMail } from "./mail";
