@@ -10,12 +10,15 @@ const StyledFrontSection = styled.section`
     align-items: center;
     justify-content: center;
     display: flex;
-    min-height: 100vh;
-    height: 100vh;
-    padding: 0;
+    min-height: 80vh;
+    height: 80vh;
+    padding-top: 150px;
 
     @media (max-width: 768px) {
         margin-top: 30px;
+        min-height: 100vh;
+        padding-top: 0px;
+        height: 100vh;
     }
     h1 {
         font-size: 80px;
@@ -127,7 +130,7 @@ const FrontPage = () => {
     data-aos-once="true"
     data-aos-easing="ease-in-out"
     data-aos-duration="400"
-    data-aos-delay="500"> Hi, I'm
+    data-aos-delay="50"> Hi, I'm
 </p>
     const name = <h1 data-aos="fade-up"
     data-aos-once="true"

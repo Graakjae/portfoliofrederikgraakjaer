@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Image from "next/image";
 import Aos from "aos";
 import { Icon } from "../images/icons";
 import "aos/dist/aos.css";
@@ -122,11 +121,7 @@ const Contact = () => {
                                 </a>
                             </li>
                         </StyledIcon>
-                        <a data-aos="fade-up"
-                                data-aos-once="true"
-                                data-aos-offset="100"
-                                data-aos-duration="400"
-                                data-aos-delay="300" href="mailto: graakjaer.f@gmail.com" className="mail">
+                        <a  href="mailto: graakjaer.f@gmail.com" className="mail">
                             graakjaer.f@gmail.com
                         </a>
                     </ContactWrapper>

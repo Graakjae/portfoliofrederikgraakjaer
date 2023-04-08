@@ -10,7 +10,6 @@ const StyledFrontSection = styled.section`
     align-items: center;
     justify-content: center;
     display: flex;
-    padding: 0;
     @media (max-width: 768px) {
             padding-top: 75px;
         }
