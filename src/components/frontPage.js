@@ -168,7 +168,7 @@ const FrontPage = () => {
                         ))}
                     </div>
                     <StyledPic data-aos="fade-up"
-                            data-aos-once="false"
+                            data-aos-once="true"
                             data-aos-easing="ease-in-out"
                             data-aos-duration="400"
                             data-aos-delay="500">

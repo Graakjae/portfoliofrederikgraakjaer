@@ -19,12 +19,11 @@ const Nav = () => {
 
     return (
         <StyledHeader>
-            <Link className="img" href="/" aria-label="home">
-                <Image src={Logo} alt="Logo" height={40} width={40} />
-            </Link>
-
             <StyledNav>
-                <>
+                <Link className="img" href="/" aria-label="home">
+                    <Image src={Logo} alt="Logo" height={40} width={40} />
+                </Link>
+                
                     <StyledLinks>
                         <ol>
                             {navLinks &&
@@ -35,7 +34,7 @@ const Nav = () => {
                                 ))}
                         </ol>
                     </StyledLinks>
-                </>
+                
             </StyledNav>
         </StyledHeader>
     );
@@ -44,12 +43,13 @@ export default Nav;
 
 const StyledHeader = styled.header`
     position: fixed;
-    top: 30px;
     z-index: 11;
-    padding: 0px 50px;
+    padding: 20px 80px;
     width: 100%;
     align-items: center;
-    display: flex;
+    background-color: #282c33;
+    opacity: 1;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.25);
     @media (max-width: 600px) {
         position: relative;
         width: 100%;
@@ -67,8 +67,8 @@ const StyledHeader = styled.header`
 
 const StyledNav = styled.nav`
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: right;
     position: relative;
     width: 100%;
     color: #a8b2d1;
