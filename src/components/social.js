@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from "../images/icons";
-
+import { nanoid } from "nanoid";
+import Link from "next/link";
 const StyledSocialList = styled.ul`
     position: fixed;
     bottom: 0px;
@@ -37,8 +38,7 @@ const StyledSocialList = styled.ul`
             margin-bottom: 25px;
             @media (max-width: 600px) {
                 margin-bottom: 0px;
-
-                }
+            }
         }
         a {
             padding: 0px;
@@ -52,7 +52,7 @@ const StyledSocialList = styled.ul`
 
                 &:hover,
                 &:focus {
-                    transition: all 0.30s cubic-bezier(0.645, 0.045, 0.355, 1);
+                    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
                     transform: translateY(-3px);
                     color: #06d640;
                 }
@@ -83,17 +83,17 @@ const socialMedia = [
 ];
 
 const Social = () => (
-    <div>
+    <ol>
         <StyledSocialList>
             {socialMedia.map(({ url, name }, i) => (
-                <li key={i}>
-                    <a href={url} target="_blank">
+                <li key={nanoid()}>
+                    <Link href={url} target="_blank">
                         <Icon name={name} />
-                    </a>
+                    </Link>
                 </li>
             ))}
         </StyledSocialList>
-    </div>
+    </ol>
 );
 
 export default Social;

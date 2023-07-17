@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { projects } from "@/lib/helper/projects";
 import { Icon } from "../images/icons";
+import { nanoid } from "nanoid";
 
 const StyledProjects = styled.section`
     flex-direction: column;
@@ -35,7 +36,6 @@ const Wrapper = styled.div`
     max-width: 1000px;
     display: flex;
     margin-bottom: 100px;
-    
 `;
 
 const StyledIcons = styled.ul`
@@ -188,7 +188,7 @@ const Projects = () => {
                 </h2>
                 {projects.map(({ name, number, urls, img, description, imgRigt, imgLeft }, i) => (
                     <Wrapper
-                        key="icon"
+                        key={nanoid()}
                         data-aos="fade-up"
                         data-aos-once="true"
                         data-aos-easing="ease-in-out"
@@ -214,9 +214,11 @@ const Projects = () => {
                                         <a href={urls.website} target="_blank">
                                             <Icon name="External" />
                                         </a>
-                                        <a href={urls.Xd} target="_blank">
-                                            <Icon name="Xd" />
-                                        </a>
+                                        {urls.Xd === undefined ? null : (
+                                            <a href={urls.Xd} target="_blank">
+                                                <Icon name="Xd" />
+                                            </a>
+                                        )}
                                     </li>
                                 </StyledIcons>
                             </ProjectHeader>

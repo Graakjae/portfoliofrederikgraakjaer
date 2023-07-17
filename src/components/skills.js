@@ -4,6 +4,7 @@ import Image from "next/image";
 import { skillIcons } from "@/lib/helper/skillIcons";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { nanoid } from "nanoid";
 
 const StyledFrontSection = styled.section`
     flex-direction: column;
@@ -11,8 +12,8 @@ const StyledFrontSection = styled.section`
     justify-content: center;
     display: flex;
     @media (max-width: 768px) {
-            padding-top: 75px;
-        }
+        padding-top: 75px;
+    }
     h2 {
         margin-top: 0px;
         color: #ccd6f6;
@@ -62,10 +63,10 @@ const StyledIcons = styled.div`
         row-gap: 30px;
         width: 100%;
         @media (max-width: 768px) {
-             column-gap: 10px;
-             row-gap: 20px;
-             font-size: 15px;
-         }
+            column-gap: 10px;
+            row-gap: 20px;
+            font-size: 15px;
+        }
         .imgCenter {
             justify-content: center;
             align-items: center;
@@ -80,9 +81,7 @@ const StyledIcons = styled.div`
                 width: 30px;
                 height: 30px;
             }
-            
         }
-        
     }
 `;
 
@@ -124,7 +123,7 @@ const Skills = () => {
                     <div className="grid">
                         {skillIcons.map(icon => (
                             <div
-                                key="icon"
+                                key={nanoid()}
                                 data-aos="fade-up"
                                 data-aos-once="true"
                                 data-aos-easing="ease-in-out"

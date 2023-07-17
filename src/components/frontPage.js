@@ -4,6 +4,7 @@ import Image from "next/image";
 import frederik from "../images/frederik-graakjaer.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { nanoid } from "nanoid";
 
 const StyledFrontSection = styled.section`
     flex-direction: column;
@@ -40,7 +41,6 @@ const StyledFrontSection = styled.section`
         margin: 20px 0 0;
         max-width: 1000px;
     }
-    
 `;
 
 const Wrapper = styled.div`
@@ -64,7 +64,6 @@ const StyledPic = styled.div`
     position: relative;
     max-width: 300px;
     margin-left: 30px;
-
 
     @media (max-width: 1100px) {
         margin: 20px auto 0;
@@ -126,52 +125,74 @@ const FrontPage = () => {
         Aos.init({});
     }, []);
 
-    const hi = <p  data-aos="fade-up"
-    data-aos-once="true"
-    data-aos-easing="ease-in-out"
-    data-aos-duration="400"
-    data-aos-delay="50"> Hi, I'm
-</p>
-    const name = <h1 data-aos="fade-up"
-    data-aos-once="true"
-    data-aos-easing="ease-in-out"
-    data-aos-duration="400"
-    data-aos-delay="100" >Frederik Graakjær</h1>
-    const title = <h2 data-aos-delay="300" data-aos="fade-up"
-    data-aos-once="true"
-    data-aos-easing="ease-in-out"
-    data-aos-duration="400"
-    >Frontend developer</h2>;
+    const hi = (
+        <p
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="400"
+            data-aos-delay="50"
+        >
+            {" "}
+            Hi, I'm
+        </p>
+    );
+    const name = (
+        <h1
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="400"
+            data-aos-delay="100"
+        >
+            Frederik Graakjær
+        </h1>
+    );
+    const title = (
+        <h2
+            data-aos-delay="300"
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="400"
+        >
+            Frontend developer
+        </h2>
+    );
     const description = (
         <>
-            <p  data-aos="fade-up"
-                            data-aos-once="true"
-                            data-aos-easing="ease-in-out"
-                            data-aos-duration="400"
-                            data-aos-delay="500">
-                I'm a frontend developer based in Aarhus, Denmark. I specialize in building responsive and user-friendly websites. Take a look at my portfolio to see some examples of my work, and feel free to get in touch to discuss your next project.
+            <p
+                data-aos="fade-up"
+                data-aos-once="true"
+                data-aos-easing="ease-in-out"
+                data-aos-duration="400"
+                data-aos-delay="500"
+            >
+                I'm a frontend developer based in Aarhus, Denmark. I specialize in building responsive and user-friendly
+                websites. Take a look at my portfolio to see some examples of my work, and feel free to get in touch to
+                discuss your next project.
             </p>
         </>
     );
 
     const items = [hi, name, title, description];
 
-    
     return (
         <div>
             <StyledFrontSection id="top">
-                <Wrapper 
-                    >
+                <Wrapper>
                     <div>
                         {items.map(item => (
-                            <div  key="item">{item}</div>
+                            <div key={nanoid()}>{item}</div>
                         ))}
                     </div>
-                    <StyledPic data-aos="fade-up"
-                            data-aos-once="true"
-                            data-aos-easing="ease-in-out"
-                            data-aos-duration="400"
-                            data-aos-delay="500">
+                    <StyledPic
+                        data-aos="fade-up"
+                        data-aos-once="true"
+                        data-aos-easing="ease-in-out"
+                        data-aos-duration="400"
+                        data-aos-delay="500"
+                    >
                         <div className="wrapper">
                             <Image data-aos-delay="600" className="img" src={frederik} alt="Frederik Graakjær" />
                         </div>

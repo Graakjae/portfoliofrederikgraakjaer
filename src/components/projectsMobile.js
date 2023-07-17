@@ -5,6 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { projects } from "@/lib/helper/projects";
 import { Icon } from "../images/icons";
+import { nanoid } from "nanoid";
 
 const StyledProjects = styled.section`
     flex-direction: column;
@@ -36,7 +37,7 @@ const Wrapper = styled.div`
     margin-bottom: 50px;
     @media (min-width: 768px) {
         max-width: 700px;
-        }
+    }
 `;
 
 const StyledIcons = styled.ul`
@@ -111,7 +112,7 @@ const ProjectsMobile = () => {
                 </h2>
                 {projects.map(({ name, number, urls, img, description }, i) => (
                     <Wrapper
-                        key="icon"
+                        key={nanoid()}
                         data-aos="fade-up"
                         data-aos-once="true"
                         data-aos-easing="ease-in-out"

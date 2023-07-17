@@ -66,17 +66,17 @@ a {
     background-color: #06d640;
 }
 
-
 /* MOBILE */
 
 @media only screen and (max-width: 768px) {
     body {
-        padding: 35px;
         max-width: 100%;
     }
 
     section {
         padding-top: 75px;
+        padding-left: 35px;
+        padding-right: 35px;
     }
 
     .section-heading:after {

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Logo from "../images/Logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import { nanoid } from "nanoid";
 
 const Nav = () => {
     const navLinks = [
@@ -23,18 +24,17 @@ const Nav = () => {
                 <Link className="img" href="/" aria-label="home">
                     <Image src={Logo} alt="Logo" height={40} width={40} />
                 </Link>
-                
-                    <StyledLinks>
-                        <ol>
-                            {navLinks &&
-                                navLinks.map(({ name }, i) => (
-                                    <div key={i}>
-                                        <Link href={`#${name}`}>{name}</Link>
-                                    </div>
-                                ))}
-                        </ol>
-                    </StyledLinks>
-                
+
+                <StyledLinks>
+                    <ol>
+                        {navLinks &&
+                            navLinks.map(({ name }, i) => (
+                                <div key={nanoid()}>
+                                    <Link href={`#${name}`}>{name}</Link>
+                                </div>
+                            ))}
+                    </ol>
+                </StyledLinks>
             </StyledNav>
         </StyledHeader>
     );
@@ -73,14 +73,9 @@ const StyledNav = styled.nav`
     width: 100%;
     color: #a8b2d1;
     z-index: 12;
-    @media (max-width: 600px) {
-        display: none;
-    }
 `;
 
 const StyledLinks = styled.div`
-    
-
     ol {
         padding: 0;
         margin: 0;
@@ -106,5 +101,8 @@ const StyledLinks = styled.div`
                 }
             }
         }
+    }
+    @media (max-width: 600px) {
+        display: none;
     }
 `;
