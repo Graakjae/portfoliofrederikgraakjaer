@@ -4,6 +4,7 @@ import Aos from "aos";
 import { Icon } from "../images/icons";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const StyledHeroSection = styled.section`
     display: flex;
@@ -49,6 +50,7 @@ const StyledHeroSection = styled.section`
         background-color: #181a1f;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-radius: 5px;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.25);
     max-width: 350px;
@@ -116,18 +118,18 @@ const Contact = () => {
                     about new opportunities, so don’t hesitate to reach out!
                 </p>
                 <div className="flex">
-                    <Link className="Link" href="mailto: graakjaer.f@gmail.com">
+                    <div className="Link">
                         <StyledIcon>
                             <li>
-                                <div href="mailto: graakjaer.f@gmail.com">
+                                <a href="mailto: graakjaer.f@gmail.com">
                                     <Icon name={"Mail"} />
-                                </div>
+                                </a>
                             </li>
                         </StyledIcon>
-                        <p className="Link mail" href="mailto: graakjaer.f@gmail.com">
+                        <a className="mail" href="mailto: graakjaer.f@gmail.com">
                             graakjaer.f@gmail.com
-                        </p>
-                    </Link>
+                        </a>
+                    </div>
                 </div>
             </div>
         </StyledHeroSection>
