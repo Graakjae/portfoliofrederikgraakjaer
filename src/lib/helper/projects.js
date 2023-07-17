@@ -14,7 +14,7 @@ export const projects = [
             "I made this audiophile multi-page e-commerce website. It was made in Next.js 13 with React. I used Zustand for state-management to keep track of added items to the cart. The project was made as a challenge from frontendmentor",
         urls: {
             github: "https://github.com/frbarbre/audiophile-ecommerce-site",
-            website: "https://audiophile-ecommerce-site-4g7au1mgv-frbarbre.vercel.app"
+            website: "https://audiophile-ecommerce-site.vercel.app"
         },
         imgRigt: false,
         imgLeft: true
