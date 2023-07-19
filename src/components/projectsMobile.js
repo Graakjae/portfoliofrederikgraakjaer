@@ -133,9 +133,11 @@ const ProjectsMobile = () => {
                                     <a href={urls.website} target="_blank">
                                         <Icon name="External" />
                                     </a>
-                                    <a href={urls.Xd} target="_blank">
-                                        <Icon name="Xd" />
-                                    </a>
+                                    {urls.Xd === undefined ? null : (
+                                        <a href={urls.Xd} target="_blank">
+                                            <Icon name="Xd" />
+                                        </a>
+                                    )}
                                 </li>
                             </StyledIcons>
                         </div>
