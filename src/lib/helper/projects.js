@@ -1,7 +1,7 @@
 import Kanban from "../../images/kanban.png";
 import Audiophile from "../../images/audiophile.png";
 import Planets from "../../images/planets.png";
-import Skillshare from "../../images/Skillshare.png";
+import Skillshare from "../../images/skillshare.png";
 
 export const projects = [
     {
